@@ -1,0 +1,19 @@
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        p1 = 0
+        p2 = len(numbers) - 1
+        res = []
+
+        while p1 < p2:
+            if (numbers[p1] + numbers [p2]) == target:
+                res.append(p1 + 1)
+                res.append(p2 + 1)
+                return res
+            elif (numbers[p1] + numbers [p2]) < target:
+                p1 += 1
+            elif (numbers[p1] + numbers [p2]) > target:
+                p2 -= 1
+            else:
+                p1 += 1
+                p2 -= 1
+        
